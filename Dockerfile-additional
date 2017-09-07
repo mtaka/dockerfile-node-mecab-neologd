@@ -1,0 +1,7 @@
+FROM taka/mecab-node-3
+
+ENV NODE_PATH /usr/local/lib/node_modules
+
+RUN npm install -g mecab-async express body-parser
+
+CMD ["mecab", "-d", "/usr/local/lib/mecab/dic/mecab-ipadic-neologd"]
